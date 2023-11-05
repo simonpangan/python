@@ -16,7 +16,12 @@ class User:
 	def log(self):
 		print(self)
 
+class Teacher(User):
+	def log(self):
+		print('I am a teacher')
+
 class Customer(User):
+    
 	def __init__(self, name, membership_type):
 		self.name = name
 		self.membership_type = membership_type
@@ -62,6 +67,7 @@ class Customer(User):
 customers = [
 	Customer("Simon Pangan", "Gold"),
 	Customer("Caleb Curry", "Gold"),
+ 	Teacher()
 ]
 
 print(customers[1].name)
@@ -69,3 +75,14 @@ print(customers[1].name)
 print(customers)
 
 customers[1].log()
+
+
+print("----")
+users = [
+	Customer("Simon Pangan", "Gold"),
+	Customer("Caleb Curry", "Gold"),
+ 	Teacher()
+]
+
+for user in users:
+	user.log()
