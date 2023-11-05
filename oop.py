@@ -11,7 +11,12 @@
 # We don't really need to create those unless we need to. 
 # That how python and its developers approach it and is considered as a best practice
 
-class Customer:
+class User:
+	
+	def log(self):
+		print(self)
+
+class Customer(User):
 	def __init__(self, name, membership_type):
 		self.name = name
 		self.membership_type = membership_type
@@ -62,3 +67,5 @@ customers = [
 print(customers[1].name)
 # del customers[1].name
 print(customers)
+
+customers[1].log()
